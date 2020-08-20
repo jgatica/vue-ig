@@ -15,6 +15,8 @@ const app = new Vue({
                 nombre: this.nuevaFruta,
                 cantidad: 0
             })
+
+            this.nuevaFruta = ''
         },
         otroMetodo(){
 
