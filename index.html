@@ -8,6 +8,7 @@
 
 <div id="app">
     <h1>{{ titulo }}</h1>
+    <input type="text" v-model="nuevaFruta">
     <ul>
         <li v-for="fruta of frutas">
             {{fruta.nombre}} - {{fruta.cantidad}}
