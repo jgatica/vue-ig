@@ -11,7 +11,7 @@ const app = new Vue({
     },
     methods: {
         agregarFruta: function () {
-
+            console.log("Diste click")
         },
         otroMetodo(){
 
