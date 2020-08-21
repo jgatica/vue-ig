@@ -3,13 +3,16 @@ Vue.component('padre', {
         <div class="bg-warning text-white p-2">
             <div>
                 <h1>Este es el componente padre</h1>
-                <hijo :numero="numero"></hijo>
+                <p>Numero padre: {{numeroPadre}}</p>
+                <hijo :numero="numeroPadre"></hijo>
+                <button class="btn btn-danger" @click="numeroPadre++">+</button>
+                
             </div>
         </div>
     `,
     data() {
         return {
-            numero:0
+            numeroPadre:0
         }
     }
 });
