@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Hola mundo con Vuejs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 
-<div id="app">
-    <h1>{{ titulo }}</h1>
-    <input type="text" v-model="nuevaFruta" v-on:keyup.enter="agregarFruta">
-    <button @click="agregarFruta">Agregar</button>
-    <ul>
-        <li v-for="fruta of frutas">
-            <input type="number" v-model.number="fruta.cantidad"> - {{fruta.nombre}}
-            <button @click="fruta.cantidad++">+</button>
-            <span v-if="fruta.cantidad=== 0"> - Sin Stock</span>
-        </li>
-    </ul>
-    <h4>TOTAL : {{ sumarFrutas }}</h4>
+<div id="app" class="container mt-5">
+    <div class="bg-danger">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur ea
+            eaque esse ex, excepturi fuga hic inventore ipsa itaque nihil
+            obcaecati pariatur quam quas quibusdam repellendus repudiandae, sapiente tenetur.
+        </p>
+    </div>
 </div>
 
 <!-- development version, includes helpful console warnings -->
