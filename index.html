@@ -16,7 +16,12 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     Vue.component('saludo', {
-        template: '<h1>{{saludo}}</h1>',
+        template: `
+            <div>
+                <h1>{{saludo}}</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        `,
         data() {
             return {
                 saludo: 'Hola desde VUE con dato que esta en el componente'
