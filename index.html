@@ -12,6 +12,20 @@
     <h5>Mensaje normal: {{mensaje}}</h5>
     <h5>Mensaje invertido : {{invertido}}</h5>
     <input type="text" v-model="mensaje">
+    <div class="container mt-5">
+        <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar"
+                 aria-valuenow="25"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 :style="{'width': porcentaje + '%'}"
+            >{{porcentaje}}</div>
+        </div>
+        <div class="mt-3">
+            <button class="btn btn-success" @click="porcentaje++">+</button>
+            <button class="btn btn-danger" @click="porcentaje--">-</button>
+        </div>
+    </div>
 </div>
 
 <!-- development version, includes helpful console warnings -->
