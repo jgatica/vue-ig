@@ -8,30 +8,11 @@
 </head>
 <body>
 
-<div id="app" class="container mt-5">
-    <h5>Mensaje normal: {{mensaje}}</h5>
-    <h5>Mensaje invertido : {{invertido}}</h5>
-    <input type="text" v-model="mensaje">
-    <div class="container mt-5">
-        <div class="progress">
-            <div class="progress-bar"
-                 role="progressbar"
-                 aria-valuenow="25"
-                 aria-valuemin="0"
-                 aria-valuemax="100"
-                 :style="{'width': porcentaje + '%'}"
-                 :class="manejarPorcentaje"
-            >{{porcentaje}}</div>
-        </div>
-        <div class="mt-3">
-            <button class="btn btn-success" @click="porcentaje++">+</button>
-            <button class="btn btn-danger" @click="porcentaje--">-</button>
-        </div>
-    </div>
+<div id="app">
+
 </div>
 
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="01.js"></script>
 </body>
 </html>
