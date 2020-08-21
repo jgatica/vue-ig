@@ -35,4 +35,9 @@ const app = new Vue({
         // Se destruye toda la instancia
         console.log('destroyed')
     },
+    methods: {
+        destruir() {
+            this.$destroy()
+        }
+    }
 });
