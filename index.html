@@ -2,29 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Hola mundo con Vuejs</title>
+    <title>Propiedades computadas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 
 <div id="app" class="container mt-5">
-    <div :class="['p-3', 'text-white', fondo]">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur ea
-            eaque esse ex, excepturi fuga hic inventore ipsa itaque nihil
-            obcaecati pariatur quam quas quibusdam repellendus repudiandae, sapiente tenetur.
-        </p>
-        <input type="text" class="form-control my-3" v-model="fondo">
-    </div>
-    <div class="text-white p-3" :class="{'bg-info': color, 'bg-success': !color}">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cumque dolorem eum facere minima,
-            natus obcaecati odio officia quibusdam, reprehenderit rerum ut veritatis. Aliquid consequatur esse ex
-            necessitatibus non velit.
-        </p>
-    </div>
-    <button class="btn btn-primary" @click="color = !color">Cambiar</button>
+
 </div>
 
 <!-- development version, includes helpful console warnings -->
