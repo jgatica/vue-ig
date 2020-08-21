@@ -11,7 +11,11 @@ const app = new Vue({
             return this.mensaje.split('').reverse().join('');
         },
         manejarPorcentaje() {
-            return this.porcentaje;
+            return {
+                'bg-success': this.porcentaje <= 10,
+                'bg-default': this.porcentaje > 10 && this.porcentaje <= 20,
+                'bg-danger': this.porcentaje > 20,
+            }
         }
     }
 });
