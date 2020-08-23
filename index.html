@@ -9,11 +9,33 @@
 <body>
 
 <div id="app" class="container mt-5">
-    
+    <padre></padre>
+    <hijo></hijo>
 </div>
 
 <!-- development version, includes helpful console warnings -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script>
+<script>
+    Vue.component('padre',{
+        template: `
+            <div class="bg-dark text-white p-3">
+                <p>Titulo padre</p>
+            </div>
+        `
+    });
+
+    Vue.component('hijo',{
+        template: `
+            <div class="bg-dark text-white p-3">
+                <h1>Listado de nombres</h1>
+            </div>
+        `
+    });
+
+    new Vue({
+        el: '#app'
+    });
+</script>
 </body>
 </html>
