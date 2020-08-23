@@ -21,6 +21,7 @@
         template: `
             <div class="bg-dark text-white p-3">
                 <p>Titulo padre</p>
+                <p>Numero en padre de vuex status numero: {{$store.state.numero}}</p>
             </div>
         `
     });
@@ -29,12 +30,20 @@
         template: `
             <div class="bg-dark text-white p-3">
                 <h1>Listado de nombres</h1>
+                <p>Numero en hijo de vuex status numero: {{$store.state.numero}}</p>
             </div>
         `
     });
 
+    const store = new Vuex.Store({
+        state: {
+            numero: 15
+        }
+    });
+
     new Vue({
-        el: '#app'
+        el: '#app',
+        store: store
     });
 </script>
 </body>
