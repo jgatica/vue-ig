@@ -30,15 +30,40 @@
         template: `
             <div class="bg-dark text-white p-3">
                 <h1>Listado de nombres</h1>
-                <p>Numero en hijo de vuex status numero: {{$store.state.numero}}</p>
+                <button class="btn btn-danger" @click="obtenerCursos">Listar</button>
+                <ul>
+                  <li v-for="item of cursos">{{ item.nombre }}</li>
+                </ul>
+                <p>Numero en hijo de vuex status numero: {{numero}}</p>
             </div>
-        `
+        `,
+        computed: {
+            ...Vuex.mapState(['numero','cursos'])
+        },
+        methods: {
+            ...Vuex.mapActions (['obtenerCursos']),
+            ...Vuex.mapMutations(['listarCursos'])
+        }
     });
 
     const store = new Vuex.Store({
         state: {
-            numero: 15
+            numero: 15,
+            cursos: []
+        },
+        mutations: {
+            listarCursos(state, cursosObtenidos) {
+                state.cursos = cursosObtenidos
+            }
+        },
+        actions: {
+            obtenerCursos: async function ({commit}) {
+                cursos = await fetch('datos.json');
+                cursosJson = await cursos.json();
+                store.commit('listarCursos', cursosJson)
+            }
         }
+
     });
 
     new Vue({
